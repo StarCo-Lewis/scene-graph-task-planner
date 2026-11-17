@@ -1,0 +1,12 @@
+# Generated run outputs and raw backend logs (README quickstart writes to runs/).
+/runs/
+# Python bytecode and caches.
+__pycache__/
+*.py[cod]
+# Local virtual environments.
+.venv/
+venv/
+# Local environment and credential files; a template may be committed.
+.env
+.env.*
+!.env.example

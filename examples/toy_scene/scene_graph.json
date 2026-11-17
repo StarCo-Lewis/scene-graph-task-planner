@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "object_tag": "floor a",
+    "caption": "floor a caption",
+    "bbox_center": [
+      1.0,
+      1.0,
+      0.5
+    ],
+    "bbox_extent": [
+      2.0,
+      2.0,
+      0.1
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 2,
+    "object_tag": "floor b",
+    "caption": "floor b caption",
+    "bbox_center": [
+      3.0,
+      1.0,
+      0.5
+    ],
+    "bbox_extent": [
+      2.0,
+      2.0,
+      0.1
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 3,
+    "object_tag": "floor c",
+    "caption": "floor c caption",
+    "bbox_center": [
+      5.0,
+      1.0,
+      0.5
+    ],
+    "bbox_extent": [
+      2.0,
+      2.0,
+      0.1
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 4,
+    "object_tag": "floor d",
+    "caption": "floor d caption",
+    "bbox_center": [
+      1.0,
+      5.0,
+      0.5
+    ],
+    "bbox_extent": [
+      2.0,
+      2.0,
+      0.1
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 10,
+    "object_tag": "red marker",
+    "caption": "red marker caption",
+    "bbox_center": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "bbox_extent": [
+      0.2,
+      0.2,
+      0.4
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 11,
+    "object_tag": "blue marker",
+    "caption": "blue marker caption",
+    "bbox_center": [
+      5.5,
+      1.5,
+      0.5
+    ],
+    "bbox_extent": [
+      0.2,
+      0.2,
+      0.4
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 12,
+    "object_tag": "wall panel",
+    "caption": "wall panel caption",
+    "bbox_center": [
+      2.0,
+      1.0,
+      0.5
+    ],
+    "bbox_extent": [
+      0.4,
+      2.0,
+      0.4
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 20,
+    "object_tag": "shelf in d",
+    "caption": "shelf in d caption",
+    "bbox_center": [
+      0.5,
+      4.5,
+      0.5
+    ],
+    "bbox_extent": [
+      0.4,
+      0.4,
+      0.4
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 21,
+    "object_tag": "crate in c",
+    "caption": "crate in c caption",
+    "bbox_center": [
+      4.5,
+      0.5,
+      0.5
+    ],
+    "bbox_extent": [
+      0.4,
+      0.4,
+      0.4
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 22,
+    "object_tag": "rack in d",
+    "caption": "rack in d caption",
+    "bbox_center": [
+      1.5,
+      5.5,
+      0.5
+    ],
+    "bbox_extent": [
+      0.4,
+      0.4,
+      0.4
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  },
+  {
+    "id": 23,
+    "object_tag": "lonely box in d",
+    "caption": "lonely box in d caption",
+    "bbox_center": [
+      1.0,
+      4.2,
+      0.5
+    ],
+    "bbox_extent": [
+      0.3,
+      0.3,
+      0.4
+    ],
+    "active": true,
+    "semantic_status": "recognized",
+    "instance_identity_verified": false,
+    "uncertainty_reason": null
+  }
+]

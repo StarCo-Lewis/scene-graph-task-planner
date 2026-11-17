@@ -1,0 +1,57 @@
+{
+  "format": "sgtp_catalogue_sanitization_v1",
+  "source_catalogue": {
+    "library_id": "quadruped_lift_arm_atomic_skills",
+    "version": "0.3.2",
+    "original_sha256": "6ea91eaca35874050a937a7c68c84de280881bb97de7b26c4288aa6601e6bf3f",
+    "original_bytes": 106387
+  },
+  "release_catalogue": {
+    "path": "catalogues/skill_catalogue_v0_3_2.release.json",
+    "sha256": "49d28f713d4e49fbde236c34cfdb0b4a87ced260631e116d0977a7b6b163b75c",
+    "bytes": 102793,
+    "serialization": "JSON.stringify(value, null, 2) + \"\\n\" (UTF-8); key order preserved"
+  },
+  "skills_unchanged": true,
+  "skills_sha256_canonical": "89fd645150d811064135af9013617dc6492372d2ed73c9022e90d2e012ce811b",
+  "skills_sha256_canonical_note": "sha256 of the skills array serialized compactly with original key order; identical before and after sanitization",
+  "transformations": [
+    {
+      "json_pointer": "/source_documents/2/filename",
+      "original_value_sha256": "23166e646099d6f874a2381e304614f9852bb87323b9b817945ee74b10248009",
+      "release_value": "manual_skill_list_20261113.txt",
+      "reason": "internal project storage path removed from published metadata; document identity is kept by source_id and sha256"
+    },
+    {
+      "json_pointer": "/source_documents/3/filename",
+      "original_value_sha256": "837e265789ff7fda38abeb6e12154b979836c2cf5e0adc7a558576ed49e84385",
+      "release_value": "wipe_surface_user_approval_20261113.txt",
+      "reason": "internal project storage path removed from published metadata; document identity is kept by source_id and sha256"
+    },
+    {
+      "json_pointer": "/source_documents/4/filename",
+      "original_value_sha256": "195cefdffb706b032970db51f7cf8023813cfb49542a180af8933b3effb3fda8",
+      "release_value": "missing_skills.json",
+      "reason": "internal project storage path removed from published metadata; document identity is kept by source_id and sha256"
+    },
+    {
+      "json_pointer": "/source_documents/5/filename",
+      "original_value_sha256": "acd09723d5b960a1c336847c2f784c35a5cf26918fa760522fc5d35483f03493",
+      "release_value": "missing_skills.json",
+      "reason": "internal project storage path removed from published metadata; document identity is kept by source_id and sha256"
+    },
+    {
+      "json_pointer": "/source_documents/6/filename",
+      "original_value_sha256": "fcde95d9855c17e34512780efa518335d621ffbe9a5b3e2321ee3f08872de100",
+      "release_value": "review.json",
+      "reason": "internal project storage path removed from published metadata; document identity is kept by source_id and sha256"
+    },
+    {
+      "json_pointer": "/catalogue_policy/future_extension",
+      "original_value_sha256": "d28df389a8ede659ba691126aeb532ccad4f75e3a2534767ad17a07b96ac5beb",
+      "release_value": "Append reviewed definitions and semantic profiles without reusing existing IDs. v0.3.0 removed adjust_body_height, position_arm_for_object, inspect_object, move_end_effector_free_space, controlled_release_object per manual_list_20261113; their full 0.2.0 definitions are kept in the authors' unpublished archive and the IDs are not reused for other semantics. Per-skill retention_policy strings are unchanged 0.2.0 text and do not override this policy. v0.3.1 (standalone skill_gap_agent only) appended wipe_surface per user_approval_20261113_wipe_surface, merging model proposals wipe_surface_with_held_cloth, wipe_surface_region_with_cloth; the shared 33-skill library is not changed. v0.3.2 (standalone skill_gap_agent only) appended the effect robot.gripper_empty=true to place_object_at_pose per challenge10_review_20261113_place_at_pose_gripper_state (symbolic state consistency with release_object); no skill was added or removed and the shared 33-skill library is not changed.",
+      "reason": "internal project storage path removed from published metadata; document identity is kept by source_id and sha256"
+    }
+  ],
+  "untouched_fields_note": "All other fields, including Chinese source labels (label_zh/source_label_zh) that identify items in the original teacher lists, are unchanged. Skill semantics, parameters, preconditions and effects are unchanged."
+}

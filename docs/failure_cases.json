@@ -1,0 +1,74 @@
+[
+  {
+    "id": "referent_attachment",
+    "tasks": [
+      "H09",
+      "H11",
+      "H12",
+      "H13"
+    ],
+    "configuration": "Qwen 3.8 Flash / room recursive",
+    "grade": "D",
+    "symptom": "The model selected ornament 124 instead of the pedestal 110 described by the user.",
+    "mechanism": "The requested target and its descriptive landmark were conflated. The recorded relation 124 on 110 is a scene-model hypothesis rather than physically verified evidence.",
+    "correct_behavior": "Resolve the target as the supporting pedestal and use the white ornament as a landmark; ask only if the supplied evidence leaves multiple defensible targets.",
+    "caveat": "Lexical cosine was recorded after the model proposal and did not automatically rebind the object; it is not evidence that cosine caused the error."
+  },
+  {
+    "id": "excessive_clarification",
+    "tasks": [
+      "H14"
+    ],
+    "configuration": "Qwen 3.8 Flash / room recursive",
+    "grade": "D",
+    "instruction": "I only need you beside the pedestal with the white ornament; nothing needs carrying.",
+    "symptom": "The response stopped to clarify alternatives after confusing a white ornament with a white platform supporting a black object.",
+    "mechanism": "The color modifier attached to the wrong noun and the target/landmark distinction was lost.",
+    "correct_behavior": "Use the supplied description and support evidence to test alternatives before asking. The historical audit judged the alternatives unsupported under the supplied task evidence.",
+    "caveat": "This classification is relative to the supplied symbolic scene and review reference, not a claim of perfect real-world uniqueness."
+  },
+  {
+    "id": "binding_wire_schema",
+    "tasks": [
+      "H15"
+    ],
+    "configuration": "Qwen 3.8 Flash / room recursive",
+    "grade": "C",
+    "symptom": "Returned visit_id=\"visit_00\" instead of the required visit_event_id=\"visit_001\"; a bound response also retained a candidate list.",
+    "mechanism": "The local binding contract rejected the response before a complete plan could be delivered.",
+    "correct_behavior": "Return the exact declared field names and mutually consistent bound/candidate states.",
+    "caveat": "The proposed object 136 agreed with the dialogue referent, but no complete plan means this is not a successful run."
+  },
+  {
+    "id": "gate_compatibility",
+    "tasks": [],
+    "configuration": "GPT topology and Sol recursive configurations",
+    "grade": "C",
+    "symptom": "Some semantically plausible navigation outputs were blocked by engineering consistency checks.",
+    "mechanism": "Examples include negated lists such as do not grasp/lift/place being mistaken for affirmative manipulation, unrecognized navigation phrasing, or strict role/query matching.",
+    "correct_behavior": "Separate genuine unsupported actions from a checker that cannot verify a valid paraphrase; preserve the failure artifact and do not claim an ungenerated plan is correct.",
+    "caveat": "These historical delivery failures are documented, not silently repaired or counted as successful in this release."
+  },
+  {
+    "id": "justified_ambiguity",
+    "tasks": [
+      "H08"
+    ],
+    "configuration": "Historical Flash arms",
+    "grade": "A stop",
+    "symptom": "Multiple scene candidates, such as racks 163 and 164, remained consistent with the instruction and available context.",
+    "mechanism": "The evidence did not uniquely identify a target.",
+    "correct_behavior": "Ask a concrete distinguishing question and stop before a plan for an arbitrary candidate is executed.",
+    "caveat": "A justified stop counts as correct handling, not a completed navigation plan. Clarification is not automatically an error."
+  },
+  {
+    "id": "missing_preservation_structure",
+    "tasks": [],
+    "configuration": "Several complete historical plans",
+    "grade": "B",
+    "symptom": "Navigation targets, order and terminal destination were correct, but no-moving/no-touching constraints were incomplete in the structured plan.",
+    "mechanism": "Natural-language restrictions were not fully preserved in machine-readable process constraints.",
+    "correct_behavior": "Retain the restriction through the planning/export contract; use explicit review for any downstream change to constraint handling.",
+    "caveat": "Accepted only in the agreed relaxed symbolic-navigation metric; physical safety or controller compliance was not established."
+  }
+]

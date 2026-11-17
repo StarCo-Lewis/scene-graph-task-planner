@@ -1,0 +1,8 @@
+{
+  "scene_id": "sgtp_toy_scene",
+  "coordinate_frame": "synthetic_world_z_up_m",
+  "length_unit": "m",
+  "derived_metadata": true,
+  "source_metadata_available": false,
+  "synthetic_toy_scene": true
+}

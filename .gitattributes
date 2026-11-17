@@ -1,0 +1,6 @@
+# Preserve exact bytes on every platform. Copied files are pinned by byte-level SHA-256
+# in release_source_lock.json and RELEASE_PROVENANCE.json, and the catalogue hash is
+# hardcoded; Git end-of-line conversion (core.autocrlf or a text attribute) could change
+# those bytes on checkout. Unsetting "text" keeps the bytes unchanged without marking
+# files as binary, so textual diffs still work.
+* -text

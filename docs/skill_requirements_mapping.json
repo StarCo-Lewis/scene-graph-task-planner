@@ -1,0 +1,487 @@
+{
+  "version": "english_skill48_requirements_mapping_release_v1",
+  "source_catalogue_version": "0.3.2",
+  "requirements_count": 48,
+  "coverage_definition": {
+    "definition": "A symbolic definition exists; not proof of a deployed expert.",
+    "partial": "Some symbolic components exist; the complete requirement is not covered.",
+    "missing": "No sufficient existing skill contract is mapped.",
+    "component": "Historical planning/state/navigation components exist; not an executable skill contract in this release."
+  },
+  "source_sha256": "ff86792aaea8befbe8234fad2cb196892de0b5b1f2abcd9d2e1c9472597f390f",
+  "rows": [
+    {
+      "requirement_id": "O01",
+      "name": "Target grasp",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "grasp_object",
+        "lift_held_object"
+      ],
+      "boundary": "The legacy contract separates grasp and lift; confirm a combined off-surface terminal condition and avoid lifting twice.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O02",
+      "name": "Placement and dropping",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "place_object_on_surface",
+        "place_object_in_container",
+        "place_object_at_pose",
+        "release_object"
+      ],
+      "boundary": "Several placement/release contracts cover parts of this requirement; define stable placement, release, retreat and the held-object state on failure.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O03",
+      "name": "Push one light object",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "push_object"
+      ],
+      "boundary": "Generic pushing needs light-object mass, friction, target-region and hand-retreat contracts.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O04",
+      "name": "Pull a light object by a handle",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "pull_object",
+        "grasp_object"
+      ],
+      "boundary": "Generic pulling does not include obtaining the handle, pulling into the region and releasing as one verified operation.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O05",
+      "name": "Press a button",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "press_control"
+      ],
+      "boundary": "Requires button localization, force/travel limits, trigger feedback and hand retreat.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O06",
+      "name": "Toggle a switch",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "rotate_with_contact_constraint",
+        "translate_with_contact_constraint"
+      ],
+      "boundary": "Contact translation/rotation are components; switch positions, limits and switching effects require a dedicated contract.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O07",
+      "name": "Adjust a knob",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "rotate_with_contact_constraint"
+      ],
+      "boundary": "Generic rotation does not establish knob operation; axis, scale, range and torque limits are required.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O08",
+      "name": "Open or close a hinged door",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "open_articulated_object",
+        "close_articulated_object"
+      ],
+      "boundary": "Specify hinge/handle, opening extent, latch and closure criteria; an openable scene label is not measured operability.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O09",
+      "name": "Open or close a drawer",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "open_articulated_object",
+        "close_articulated_object"
+      ],
+      "boundary": "Specify drawer axis, extent and closure criteria; a hinge trajectory is not interchangeable.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O10",
+      "name": "Remove or replace a light lid",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "grasp_object",
+        "lift_held_object",
+        "place_object_on_surface",
+        "place_object_at_pose"
+      ],
+      "boundary": "Reuse pickup/placement components; lid-container pairing, alignment and the non-threaded scope remain to be defined.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O11",
+      "name": "Unscrew or tighten a lid",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "rotate_with_contact_constraint"
+      ],
+      "boundary": "Threaded motion, stabilizing the second object, lid removal and tightening terminal conditions lack a complete contract.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O12",
+      "name": "Gather scattered light objects",
+      "coverage": "missing",
+      "existing_skill_ids": [],
+      "boundary": "Continuous sweeping, collection region, object set and completion criteria are missing.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O13",
+      "name": "Spread a cloth",
+      "coverage": "missing",
+      "existing_skill_ids": [],
+      "boundary": "wipe_surface assumes an already held cloth and does not unfold it; manual preparation must be an explicit input premise.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O14",
+      "name": "Transfer between hands",
+      "coverage": "missing",
+      "existing_skill_ids": [],
+      "boundary": "External-recipient handover is not an inter-hand transfer; two-hand occupancy and release need a contract.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O15",
+      "name": "Pour with one hand",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "pour_into_container"
+      ],
+      "boundary": "Specify source/recipient containers, contents, amount, upright recovery and spill handling.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O16",
+      "name": "Wipe a surface region",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "wipe_surface"
+      ],
+      "boundary": "Assumes an already held cloth; specify region/path and contact settings. Traversing a surface does not prove cleanliness.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O17",
+      "name": "Align and stack",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "place_object_on_surface",
+        "place_object_at_pose"
+      ],
+      "boundary": "Placement exists but stack alignment, stability and level-specific terminal state need a contract.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O18",
+      "name": "Insert for storage",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "translate_with_contact_constraint",
+        "place_object_at_pose"
+      ],
+      "boundary": "Generic contact translation is not slot insertion; slot direction, clearance, contact/withdrawal and stable insertion criteria are required.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O19",
+      "name": "Stabilize and pour with two hands",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "hold_and_stabilize_object",
+        "pour_into_container"
+      ],
+      "boundary": "Components exist but not a verified bimanual policy; resource sharing and coordinated execution cannot be inferred from a serial plan.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "O20",
+      "name": "Reset hand posture",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "reset_manipulation_state"
+      ],
+      "boundary": "The generic reset does not fix the hand/gripper/arm scope; this requirement concerns fingers/wrist after empty-hand or stable-placement confirmation.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M01",
+      "name": "Omnidirectional walking",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "walk_omnidirectional_velocity"
+      ],
+      "boundary": "Requires velocity frame, duration/heartbeat and explicit stopping confirmation.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M02",
+      "name": "Stepping turn",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "turn_by_stepping"
+      ],
+      "boundary": "Confirm angle units, error, translation drift and a stable final stance.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M03",
+      "name": "Turn in place",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "turn_in_place"
+      ],
+      "boundary": "Clarify the distinction from a stepping turn and the permitted translation drift.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M04",
+      "name": "Whole-body reach and grasp",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "reach_and_grasp_object"
+      ],
+      "boundary": "The reach/grasp contract does not prove body coordination, operating range or the off-surface terminal state.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M05",
+      "name": "Whole-body reach and place",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "reach_and_place_object"
+      ],
+      "boundary": "The reach/place contract does not establish a crouch, body lean or return to standing.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M06",
+      "name": "Bend and lift a box",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "bend_and_lift_object"
+      ],
+      "boundary": "The symbolic lift/stand goal exists; actual mass, size, two-arm control and stable-stance contracts are external.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M07",
+      "name": "Reset lower body",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "reset_lower_body"
+      ],
+      "boundary": "Requires a standing reference state and held-object/support restrictions.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M08",
+      "name": "Reset upper body",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "reset_upper_body"
+      ],
+      "boundary": "Distinguish empty-hand and carrying recovery; do not assume object release.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M09",
+      "name": "Controlled stop and stable stance",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "walk_omnidirectional_velocity"
+      ],
+      "boundary": "Zero commanded velocity does not prove a stop; explicit stop, acknowledgment and stable-stance feedback are needed.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M10",
+      "name": "Fine adjustment of manipulation stance",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "navigate_to_location",
+        "turn_in_place"
+      ],
+      "boundary": "Movement components do not establish fine stance adjustment; define frame, bounded displacement, accuracy and stable termination.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M11",
+      "name": "Hold a low working posture",
+      "coverage": "missing",
+      "existing_skill_ids": [],
+      "boundary": "Arm-height adjustment is not whole-body lowering and posture holding.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M12",
+      "name": "Lower a box with both arms",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "reach_and_place_object",
+        "place_object_at_pose"
+      ],
+      "boundary": "Single-hand/generic placement does not cover lowering a held box, two-arm disengagement and standing recovery.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M13",
+      "name": "Walk carrying an object in one hand",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "hold_and_stabilize_object",
+        "navigate_to_location"
+      ],
+      "boundary": "Holding plus navigation does not prove a carrying gait; requires an explicit mode and stability boundary.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M14",
+      "name": "Walk carrying a box with both arms",
+      "coverage": "missing",
+      "existing_skill_ids": [],
+      "boundary": "Lifting a box plus ordinary walking does not establish locomotion with visual occlusion.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M15",
+      "name": "Coordinate pedal opening and dropping",
+      "coverage": "missing",
+      "existing_skill_ids": [],
+      "boundary": "Requires coordinated pedal press/hold/drop/release and well-defined lid/held-object state on interruption.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M16",
+      "name": "Push a box with whole-body coordination",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "push_object"
+      ],
+      "boundary": "Tabletop pushing is not whole-body box pushing; contact, balance, load and disengagement contracts are needed.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M17",
+      "name": "Pull a box with whole-body coordination",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "pull_object"
+      ],
+      "boundary": "Requires handle acquisition, backward stepping, whole-body balance and release.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M18",
+      "name": "Whole-body supported manipulation",
+      "coverage": "partial",
+      "existing_skill_ids": [
+        "hold_and_stabilize_object"
+      ],
+      "boundary": "Holding does not establish body support while the other hand works; concurrent resource contracts are needed.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M19",
+      "name": "Recover balance after a small disturbance",
+      "coverage": "missing",
+      "existing_skill_ids": [],
+      "boundary": "Specify disturbance limits, recovery and stop criteria; excludes standing up after a fall.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "M20",
+      "name": "Follow a reference path and avoid obstacles",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "External navigation materials existed historically; the actual shared-framework path-following provider was not confirmed and is excluded here.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N01",
+      "name": "Mapping and exploration",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "Mapping produces state/resources; active exploration also needs planning/execution. Archived material is not an integrated mapping service.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N02",
+      "name": "Instruction-grounded navigation",
+      "coverage": "definition",
+      "existing_skill_ids": [
+        "navigate_to_object",
+        "navigate_to_location"
+      ],
+      "boundary": "Binding/navigation planning definitions exist; execution requires a verified frame/map version and carrying mode. Do not send an object center as a ready-to-execute goal.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N03",
+      "name": "Search navigation",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "Query/route/observation components do not establish a complete search loop; budget, not-found and duplicate-target contracts are needed.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N04",
+      "name": "Ordered multi-stop scheduling",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "Room-recursive visit/memory components existed historically; resumption needs verified execution effects in the shared framework.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N05",
+      "name": "Select a manipulation stance",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "Historical geometric candidate-point filtering did not prove target orientation, manipulator reach or whole-body clearance; it is excluded from this release.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N06",
+      "name": "Replan after obstruction",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "Requires original obstruction feedback, map changes and evidence that an obstacle may be moved; this is not a replacement for local avoidance.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N07",
+      "name": "Acquire an additional observation",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "Observation querying may be reused; viewpoint changes need an actual provider. An image alone does not establish an action effect.",
+      "execution_verified": false
+    },
+    {
+      "requirement_id": "N08",
+      "name": "Inspection patrol",
+      "coverage": "component",
+      "existing_skill_ids": [],
+      "boundary": "Visit/logging components do not establish patrol normal/abnormal/unknown criteria or a verification interface.",
+      "execution_verified": false
+    }
+  ],
+  "limitations": [
+    "Coverage is a symbolic contract assessment, not measured robot capability.",
+    "Partial/component mappings must not be treated as equivalent executable skills.",
+    "This release excludes external navigation providers and robot deployment."
+  ]
+}

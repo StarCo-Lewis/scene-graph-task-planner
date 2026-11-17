@@ -1,0 +1,916 @@
+{
+  "format": "sgtp_release_provenance_v1",
+  "release_version": "scene_graph_task_planner_release_20261117",
+  "path_mapping": {
+    "embodied_pipeline/**": "workspace embodied_pipeline/** (same relative path)",
+    "vendor/legacy_engines/<engine>/<file>": "workspace outputs/<engine>/<file>",
+    "catalogues/historical/...historical33.json": "workspace outputs/quadruped_atomic_skill_library.v0.1.json",
+    "catalogues/skill_catalogue_v0_3_2.release.json": "workspace outputs/skill_catalogue_fixed_state_20261113_v1/skill_catalogue.json (sanitized)"
+  },
+  "original_paths_are_relative_to": "the authors' research workspace root (not shipped)",
+  "counts": {
+    "release_only": 40,
+    "copied": 49,
+    "derived": 1,
+    "adapted": 6
+  },
+  "files": [
+    {
+      "release_path": ".gitattributes",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "08b858cb9453a395a509f53066e9e0ebe2cfe6236f86942dc2ba5a0a4fe748c6",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": ".gitignore",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "22abeda26758499368ff71a128d5b5c2149e8aeb2643b72dce4800b867d75e33",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "catalogues/catalogue_sanitization.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "3dcb61ef0ebc52b9c6728d74de65e9a30df320bed527b3dc0c86706a40799748",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "catalogues/historical/quadruped_atomic_skill_library_v0_2_0.historical33.json",
+      "kind": "copied",
+      "original_path": "outputs/quadruped_atomic_skill_library.v0.1.json",
+      "original_sha256": "63ca20375a1c33c0dd2d366ea66a92921c3c69a1ea8839b10f23a1fd055f5682",
+      "release_sha256": "63ca20375a1c33c0dd2d366ea66a92921c3c69a1ea8839b10f23a1fd055f5682",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "catalogues/runtime_compatibility_v0_3_2.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "d879b23551c522c2c91bb6b9eca91322b9c6e51716d155298ebb838257f57d28",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "catalogues/skill_catalogue_v0_3_2.release.json",
+      "kind": "derived",
+      "original_path": "outputs/skill_catalogue_fixed_state_20261113_v1/skill_catalogue.json",
+      "original_sha256": "6ea91eaca35874050a937a7c68c84de280881bb97de7b26c4288aa6601e6bf3f",
+      "release_sha256": "49d28f713d4e49fbde236c34cfdb0b4a87ced260631e116d0977a7b6b163b75c",
+      "byte_identical": false,
+      "adapter": false,
+      "description": "Metadata-only sanitization (internal storage paths in source_documents replaced by file names); skills array unchanged. See catalogues/catalogue_sanitization.json."
+    },
+    {
+      "release_path": "docs/adapters.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "24f9413153f06b0a6922a5f3f2ce7301bc4473387e42e6104622705dbba5d488",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/architecture.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "38cf04c07392466715673c182fada48f68c737f4c788b1c28ce3239e40d9051f",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/catalogue.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "9c5a5ed11502c001a5066bac5feb92688670140e400457891ede5ad4af1eab08",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/cli.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "06cd9bbd47f0391746a1b888b207b3d236adc71cad5a5f7ebb410dfb67830a76",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/failure_cases.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "8d21400ae2adedf88d2dbfc9df8d6d7bb407b5e105cd1417481842e1604e7f0a",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/failure_cases.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "e128193641b7a22f63743a53fda0593e7234a4ff948e67d21adf1455385f1559",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/figures/architecture.svg",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "dc247860b04706d4e3fd51af6c023d707dd816426b84f28df1cbb4c848ae264f",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/figures/flash_methods.svg",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "5d77ae177364ff8f6c1f21bd0d4bf21b3d950da60a528d52b2010e0a1b925fd3",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/figures/recursive_models.svg",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "d354ea978ca77cc1703e553b7bfd2d1ace84f330f9a0cf9b378813ded6cdae78",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/figures/topology_models.svg",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "4e5cfa2ed0ed8c29b7e1ed575f1f35dea4e132b434831dfe2e02b091d7d37066",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/historical_results.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "84ef26b5717df741281a44f30d0c39fa832a376b341f0fbfbb65d5c0a85de860",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/io.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "199dd556f6019787720daebc4f6927657ae5d4d5c782513bbb4c476b44ca0159",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/methods.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "450af13a4be905ebc5c498099d7fa6001ad74f8ea5fa2ffc95b5f6f5291f9cbf",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/results.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "57056bd1704a49e11ba080d08ee993f6cd8a1eb1b110b1f07f56cf1f8234b4da",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/room_recursive_variant.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "7826a7fababc1feb0c7a53a72efa26d283032b44263afb8e09376d4f948cb837",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/skill_requirements_mapping.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "dfaadb000760847846d0faaa83705f7fcf4aeeddda5630a7c9b144ac599d2e37",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/skill_requirements.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "77a5766597fd44dc363d50eb37c134d9f0bbc9d87b3cf6a0597cc599ccddb2f3",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/skill_wire_compatibility.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "7d7b004e4e3461df86969c10bf651ba05a2d69df88163a73ac729c10eb8a7ab2",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/task_ratings.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "5bc9d8978aa3742011cc3e1927a8256d24aa42c10d46c3af5ba386c72a13f697",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/upload.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "fbe75ff9764d47dbc9cb66297af6e9d4d25da7dada7fed4ad7a0a92ab33c226d",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "docs/validation.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "123deee8de21a5c15d467a7a99fdd6ea8144e8849e23b8002bb9488d95fdd7a2",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/__init__.py",
+      "original_sha256": "d8485ba668269e6667469652af60257d31804e3971840241db8472f9493e3c40",
+      "release_sha256": "d8485ba668269e6667469652af60257d31804e3971840241db8472f9493e3c40",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/_legacy.py",
+      "kind": "adapted",
+      "original_path": "embodied_pipeline/_legacy.py",
+      "original_sha256": "99e5781f2828764dfa0749ca52ea77084f0fef41f376b43cb3279400b264ef6d",
+      "release_sha256": "06e1e502f9709b62e14c68cf8e34313300a485e850e86a29cbbde85c8df2fc42",
+      "byte_identical": false,
+      "adapter": true,
+      "description": "Engines are loaded from vendor/legacy_engines/ (via _release.ENGINE_ROOT) instead of the workspace outputs/; only the three planning engines plus release_adapters are on the engine path."
+    },
+    {
+      "release_path": "embodied_pipeline/_release.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "d1146b4018fa299f2ad206cbda5947a9373d389c4a0bac54e55a1873221e016d",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/candidate_review/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/candidate_review/__init__.py",
+      "original_sha256": "5a811e6d8ddd4a59d64b217db78b242072c62953a99f6f2dcfbf4f1c26da4c7b",
+      "release_sha256": "5a811e6d8ddd4a59d64b217db78b242072c62953a99f6f2dcfbf4f1c26da4c7b",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/candidate_review/evidence.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/candidate_review/evidence.py",
+      "original_sha256": "99b4b07d462bb5de9f850d9e4d9e919e22d962b3ecdc1b1149d1678e25939454",
+      "release_sha256": "99b4b07d462bb5de9f850d9e4d9e919e22d962b3ecdc1b1149d1678e25939454",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/candidate_review/hooks.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/candidate_review/hooks.py",
+      "original_sha256": "32ba84c31ea13e6ae89f943dfe25567501c6dceb7638c8e63dd8b4623a20c499",
+      "release_sha256": "32ba84c31ea13e6ae89f943dfe25567501c6dceb7638c8e63dd8b4623a20c499",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/candidate_review/lexical_cosine.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/candidate_review/lexical_cosine.py",
+      "original_sha256": "c21e6d8235daa815edb600c72059d10d8f3a68d1c3f800565a805d73ba67a934",
+      "release_sha256": "c21e6d8235daa815edb600c72059d10d8f3a68d1c3f800565a805d73ba67a934",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/contracts/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/contracts/__init__.py",
+      "original_sha256": "6e34d8ddd5186dc73092591ec26bab1840b2d44fec56290f6453f4cdcfb074ed",
+      "release_sha256": "6e34d8ddd5186dc73092591ec26bab1840b2d44fec56290f6453f4cdcfb074ed",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/contracts/evidence_log.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/contracts/evidence_log.py",
+      "original_sha256": "37ac260f557545097174d16a7eafc257fd82c269e3e130ef384db92019004262",
+      "release_sha256": "37ac260f557545097174d16a7eafc257fd82c269e3e130ef384db92019004262",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/contracts/text_budget.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/contracts/text_budget.py",
+      "original_sha256": "ae4415f47f42c2cf723c39f91bf68e2612ca854bfdc8e9ce408e8fa53b27fa9a",
+      "release_sha256": "ae4415f47f42c2cf723c39f91bf68e2612ca854bfdc8e9ce408e8fa53b27fa9a",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/data_collection/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/data_collection/__init__.py",
+      "original_sha256": "3ba24cf7abefd9119a6d984e88ae2b6692f167253c8257afb55ad9e237feea4e",
+      "release_sha256": "3ba24cf7abefd9119a6d984e88ae2b6692f167253c8257afb55ad9e237feea4e",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/data_collection/catalog.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/data_collection/catalog.py",
+      "original_sha256": "5d1c161d97b8db081ed92f3596f190f23dab5661b9504a77ea117cce508ed6c6",
+      "release_sha256": "5d1c161d97b8db081ed92f3596f190f23dab5661b9504a77ea117cce508ed6c6",
+      "byte_identical": true,
+      "adapter": false,
+      "description": "Shipped because context_contract.py imports .catalog on every worker run."
+    },
+    {
+      "release_path": "embodied_pipeline/data_collection/context_contract.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/data_collection/context_contract.py",
+      "original_sha256": "7e8caea2a4568f08bdfbdfe1be22ed5ae13dfe8afc4b28eda9be10990b91f9a0",
+      "release_sha256": "7e8caea2a4568f08bdfbdfe1be22ed5ae13dfe8afc4b28eda9be10990b91f9a0",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/data_collection/plan_artifact.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/data_collection/plan_artifact.py",
+      "original_sha256": "9b82288969490d2126c13644175151d82b55fc3d904f6aab1be084d07e6e0872",
+      "release_sha256": "9b82288969490d2126c13644175151d82b55fc3d904f6aab1be084d07e6e0872",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/instruction_skills/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/instruction_skills/__init__.py",
+      "original_sha256": "5b792409702534c7b7e23df6a4863b7516097d8b7e4e3ef7fb6b487c791b7dd3",
+      "release_sha256": "5b792409702534c7b7e23df6a4863b7516097d8b7e4e3ef7fb6b487c791b7dd3",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/instruction_skills/candidate_policy.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/instruction_skills/candidate_policy.py",
+      "original_sha256": "dd9aec1ac2ec6593f86ba681aaba11abf48e3850592b46f4253fea08804c2705",
+      "release_sha256": "dd9aec1ac2ec6593f86ba681aaba11abf48e3850592b46f4253fea08804c2705",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/instruction_skills/full_inventory.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/instruction_skills/full_inventory.py",
+      "original_sha256": "5b399b47ed91267e52e53da62ae0fa624e0c4dc0124ed8ab9cd74ccc04b18fe6",
+      "release_sha256": "5b399b47ed91267e52e53da62ae0fa624e0c4dc0124ed8ab9cd74ccc04b18fe6",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/orchestration/__init__.py",
+      "kind": "adapted",
+      "original_path": "embodied_pipeline/orchestration/__init__.py",
+      "original_sha256": "8c2e4bb40ae7b059c30a3ddf4faba41e940221554f013a48a7dd25ea1e358388",
+      "release_sha256": "6a1516c541d29221a59924b5b792779407727c0d14d42739a26ccd1d50dde66c",
+      "byte_identical": false,
+      "adapter": true,
+      "description": "Exports nothing eagerly; the original imported proposal/feedback runners that depend on the excluded symbolic-proxy executor."
+    },
+    {
+      "release_path": "embodied_pipeline/orchestration/task_collection_worker.py",
+      "kind": "adapted",
+      "original_path": "embodied_pipeline/orchestration/task_collection_worker.py",
+      "original_sha256": "b8b4d9b426a55c32118f7f4d3e1c77c04e7f895a8f84cd80de7c18a09d781e5c",
+      "release_sha256": "3f56429179c8fa43a00b674a82bba036322eeeff0c854ca9fdf6d17da03f066f",
+      "byte_identical": false,
+      "adapter": true,
+      "description": "Skill library and offered skills come from the hash-checked catalogue profile; the formal profile adds the model-visible release_catalogue_scope block; hashed source-file list points at vendored paths."
+    },
+    {
+      "release_path": "embodied_pipeline/planning/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/planning/__init__.py",
+      "original_sha256": "265b50d38718a2db45dba8346d95add8337255193c430f0cb2b46a63088f5792",
+      "release_sha256": "265b50d38718a2db45dba8346d95add8337255193c430f0cb2b46a63088f5792",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/planning/intent_alignment_worker.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/planning/intent_alignment_worker.py",
+      "original_sha256": "9a8f760848fec4615833b9cad76f0032a1c03144066c9d8324b2f7b12699c0fc",
+      "release_sha256": "9a8f760848fec4615833b9cad76f0032a1c03144066c9d8324b2f7b12699c0fc",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/planning/intent_prompt.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/planning/intent_prompt.py",
+      "original_sha256": "24879f54f250ec905e6509d65de02ab54d077277f7a01d9c2084ba99c88a43ef",
+      "release_sha256": "24879f54f250ec905e6509d65de02ab54d077277f7a01d9c2084ba99c88a43ef",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/planning/process_contract.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/planning/process_contract.py",
+      "original_sha256": "3e0fc5d8e4f10fe3521e9de9d4094e6e05051e3775505ab97889fd90b48286dc",
+      "release_sha256": "3e0fc5d8e4f10fe3521e9de9d4094e6e05051e3775505ab97889fd90b48286dc",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/room_recursive/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/room_recursive/__init__.py",
+      "original_sha256": "04dfa3ee0da83f8603a919eaef5aefe56bbeea112146ebb89d5503703d1d026d",
+      "release_sha256": "04dfa3ee0da83f8603a919eaef5aefe56bbeea112146ebb89d5503703d1d026d",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/room_recursive/room_plan.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/room_recursive/room_plan.py",
+      "original_sha256": "fb273ce45763791886995ef1cb86c63680869107cfabf061c8b523083a4612bf",
+      "release_sha256": "fb273ce45763791886995ef1cb86c63680869107cfabf061c8b523083a4612bf",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/__init__.py",
+      "original_sha256": "085531140a4853878aa2a0134f7e0b7608fa2ebca919a42b5a6f4d51c0209642",
+      "release_sha256": "085531140a4853878aa2a0134f7e0b7608fa2ebca919a42b5a6f4d51c0209642",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/binding.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/binding.py",
+      "original_sha256": "2ec8db6f62dec2420fd0c9c60aa2d50b6e2845182e62e4b71648f0bcf66dc461",
+      "release_sha256": "2ec8db6f62dec2420fd0c9c60aa2d50b6e2845182e62e4b71648f0bcf66dc461",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/cli.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/cli.py",
+      "original_sha256": "8156489fe3506280dbb6ad11e447821e3b19c16ff209728fafdcf27c77c6b41c",
+      "release_sha256": "8156489fe3506280dbb6ad11e447821e3b19c16ff209728fafdcf27c77c6b41c",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/handoff.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/handoff.py",
+      "original_sha256": "ff11caff7e9f4edc932445fce24b03e4f26705900d181f475e90d3869dbaaacc",
+      "release_sha256": "ff11caff7e9f4edc932445fce24b03e4f26705900d181f475e90d3869dbaaacc",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/index.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/index.py",
+      "original_sha256": "bb44b05bf316421baa4df72dab0cdb25b4cba5e030864228b5ea253eafbb4998",
+      "release_sha256": "bb44b05bf316421baa4df72dab0cdb25b4cba5e030864228b5ea253eafbb4998",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/overlay.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/overlay.py",
+      "original_sha256": "d71444b4ce418d2442631f134ca9189fb1822ca63dafb0b397b9ab07ff169431",
+      "release_sha256": "d71444b4ce418d2442631f134ca9189fb1822ca63dafb0b397b9ab07ff169431",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/region_phrase.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/region_phrase.py",
+      "original_sha256": "52c1bc4b6052fdb0533da9c6ef9d138ef0bcc59eacdd6ea4d2e88d111231d3d7",
+      "release_sha256": "52c1bc4b6052fdb0533da9c6ef9d138ef0bcc59eacdd6ea4d2e88d111231d3d7",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/route.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/route.py",
+      "original_sha256": "515a49ba7b1f2f8184d293de286654d06e4401616fe2ec8e7e7859c416ab048e",
+      "release_sha256": "515a49ba7b1f2f8184d293de286654d06e4401616fe2ec8e7e7859c416ab048e",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/slice.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/slice.py",
+      "original_sha256": "37196eef510f2e0ad7111f4d35ce17933039527530509e780083a377fe4b195e",
+      "release_sha256": "37196eef510f2e0ad7111f4d35ce17933039527530509e780083a377fe4b195e",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/topology_filter/stage.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/topology_filter/stage.py",
+      "original_sha256": "cb0ebbaa4919bdf0a0a45d3d172a5060cf13891dbff1fddbe01317bc96efd918",
+      "release_sha256": "cb0ebbaa4919bdf0a0a45d3d172a5060cf13891dbff1fddbe01317bc96efd918",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/validation/__init__.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/validation/__init__.py",
+      "original_sha256": "b54fad284ea478f97bb6c7e107a8f07fafc03d16a755c0cbae32112fc7cc9de3",
+      "release_sha256": "b54fad284ea478f97bb6c7e107a8f07fafc03d16a755c0cbae32112fc7cc9de3",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "embodied_pipeline/validation/plan_semantics.py",
+      "kind": "copied",
+      "original_path": "embodied_pipeline/validation/plan_semantics.py",
+      "original_sha256": "014cc76384aebd3850655c26ac757aa0afc990b9d44cabd402dc795ec9bd8c41",
+      "release_sha256": "014cc76384aebd3850655c26ac757aa0afc990b9d44cabd402dc795ec9bd8c41",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "examples/README.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "e445b50bb6406e262485257f696784c8208ad23d49721558c2a81a398f1ce1cf",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "examples/toy_scene/scene_graph_edges.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "873d1286c2df9ed0980fa45ac6a8c057a458f61efe6466090aa483e3920d788d",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "examples/toy_scene/scene_graph.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "40931d76face8b0fbb4fbd94e356990c64ae83222639789ff1a5f2253c8af5e9",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "examples/toy_scene/scene_metadata.json",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "1fa13a2b34b9b68f037913d6ef33942a6f03c9318b5c0f9b547745cd690df482",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "README.md",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "215b92a58292b88a3a2b3098f42e8ed70bb0239a6bf4c7c30071ab429983ab5b",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "sgtp/__init__.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "2c9259961a43ff719eec18ed94672ffda45092604eb3f6af24aa94cc0b519a53",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "sgtp/__main__.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "1d348b5803e26ad0136416c2cb6850e75d47abe42d591ccd0a7981535e4ad8a1",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "sgtp/cli.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "16dc0caf52d4c575ac4920933fd065985ca907e95de5e357ffd1837cde70e007",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "sgtp/lock.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "5fbd1b0b33df706222a9c0396a0d86dd9f164c60b26089b44e492e11479f6eea",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "sgtp/synthetic_backend.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "5dd1731a498791783c87af8b9bf3a7bb59fa70d8390acb81a020bcd0f53aa5b1",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "sgtp/toy.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "f89980c6d551ec53073cba5917f54cb550b1c6db80a8b9f936b9b70ee6d1a50a",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "tests/__init__.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "7e2ed5a9b4f490150cfe2a16d8f9853fab48e068a6d094a4ccce5da7d67959b9",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "tests/test_release_offline.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "bb5024b3ce5c8c9269cf04730b6c247391230ba800f42bc08f9d273df83e4689",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/llm_audit_v1/matrix_type_contract.py",
+      "kind": "copied",
+      "original_path": "outputs/llm_audit_v1/matrix_type_contract.py",
+      "original_sha256": "a124148c966a400da6814d6a37f0e10059ed1f1803946ec84a68e68609750652",
+      "release_sha256": "a124148c966a400da6814d6a37f0e10059ed1f1803946ec84a68e68609750652",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/llm_audit_v1/response_audit.py",
+      "kind": "copied",
+      "original_path": "outputs/llm_audit_v1/response_audit.py",
+      "original_sha256": "c3ecddf41f99454ee6dc1e49a7f902736b134ccb81e87e6e16adb602b3797fb9",
+      "release_sha256": "c3ecddf41f99454ee6dc1e49a7f902736b134ccb81e87e6e16adb602b3797fb9",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/llm_audit_v1/typed_matrix_ids.py",
+      "kind": "adapted",
+      "original_path": "outputs/llm_audit_v1/typed_matrix_ids.py",
+      "original_sha256": "b33184d755a1a02306681f956d64ed4750e71428eaa8c0015b74e58fd925775d",
+      "release_sha256": "8501a5035b48514fb35cb91a896b0573c73c4d09ccfd62d1fa918097917fd031",
+      "byte_identical": false,
+      "adapter": true,
+      "description": "allocation() uses SGTP_PLAN_SCOPE as plan_id when set (replayable recordings); otherwise the original random uuid4."
+    },
+    {
+      "release_path": "vendor/legacy_engines/object_alignment_v1/align_objects.py",
+      "kind": "copied",
+      "original_path": "outputs/object_alignment_v1/align_objects.py",
+      "original_sha256": "ada923b778606e701157c4f99a06b00e48cf83c4e9bf69c485e74eda9351c9f0",
+      "release_sha256": "ada923b778606e701157c4f99a06b00e48cf83c4e9bf69c485e74eda9351c9f0",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/object_alignment_v1/decomposition_wire.py",
+      "kind": "copied",
+      "original_path": "outputs/object_alignment_v1/decomposition_wire.py",
+      "original_sha256": "9144f73022f5f5d1b95675fd623e18c62fd4d28d1b8246a2776633dff51c5466",
+      "release_sha256": "9144f73022f5f5d1b95675fd623e18c62fd4d28d1b8246a2776633dff51c5466",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/object_alignment_v1/llm_graph_binding.py",
+      "kind": "copied",
+      "original_path": "outputs/object_alignment_v1/llm_graph_binding.py",
+      "original_sha256": "bd22568828b16fcb1541fc48e53982e4f11100312b2d5dce84da6f37c9c6f314",
+      "release_sha256": "bd22568828b16fcb1541fc48e53982e4f11100312b2d5dce84da6f37c9c6f314",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/object_alignment_v1/llm_transport.py",
+      "kind": "adapted",
+      "original_path": "outputs/object_alignment_v1/llm_transport.py",
+      "original_sha256": "4615861ac5e4d00330d332f22cd257354f4252a4b307f2361cc158aaa64d1ce1",
+      "release_sha256": "db78f0c74ef02c05862156298b8c69250b2b7105e4a82716df85252913973045",
+      "byte_identical": false,
+      "adapter": true,
+      "description": "Calls release_backend.route before the original urllib request (default offline: no request)."
+    },
+    {
+      "release_path": "vendor/legacy_engines/object_alignment_v1/runtime_goal_protocol.py",
+      "kind": "copied",
+      "original_path": "outputs/object_alignment_v1/runtime_goal_protocol.py",
+      "original_sha256": "e23496a63671ed401f9788eb5f46d215484b5c14dfedcc2926cb38b98057fa2c",
+      "release_sha256": "e23496a63671ed401f9788eb5f46d215484b5c14dfedcc2926cb38b98057fa2c",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/object_alignment_v1/scene_input_interface.py",
+      "kind": "copied",
+      "original_path": "outputs/object_alignment_v1/scene_input_interface.py",
+      "original_sha256": "56ff1f2244991f3101b618083470da7ffcc2d3cfd413923a80509c9d9d39e387",
+      "release_sha256": "56ff1f2244991f3101b618083470da7ffcc2d3cfd413923a80509c9d9d39e387",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/object_alignment_v1/structural_matrix.py",
+      "kind": "copied",
+      "original_path": "outputs/object_alignment_v1/structural_matrix.py",
+      "original_sha256": "22641b0faf5034bb4af3b3f3556fecdf4655b2c158fdd354ffc30c545d7a7f99",
+      "release_sha256": "22641b0faf5034bb4af3b3f3556fecdf4655b2c158fdd354ffc30c545d7a7f99",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/release_adapters/release_backend.py",
+      "kind": "release_only",
+      "original_path": null,
+      "original_sha256": null,
+      "release_sha256": "e9cf2e0e6fc73478f194abdec6fd6d25376e45cee017e286c89e24316513b5de",
+      "byte_identical": null,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/action_identity.py",
+      "kind": "copied",
+      "original_path": "outputs/skill_matching_v1/action_identity.py",
+      "original_sha256": "344511bfa943313fa750e0a2270759e3b0cf0520333d8e77661976d35405eaf2",
+      "release_sha256": "344511bfa943313fa750e0a2270759e3b0cf0520333d8e77661976d35405eaf2",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/action_matrix.py",
+      "kind": "copied",
+      "original_path": "outputs/skill_matching_v1/action_matrix.py",
+      "original_sha256": "ba628b984d6a3207b506b1b40ef797907f80323c10e377e3b50ea46f06c32f19",
+      "release_sha256": "ba628b984d6a3207b506b1b40ef797907f80323c10e377e3b50ea46f06c32f19",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/action_sequence.py",
+      "kind": "copied",
+      "original_path": "outputs/skill_matching_v1/action_sequence.py",
+      "original_sha256": "a6058b80294562651f734c030eaad6e84965bb4e52b7794ff9ea34178782019a",
+      "release_sha256": "a6058b80294562651f734c030eaad6e84965bb4e52b7794ff9ea34178782019a",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/embedding_worker.py",
+      "kind": "copied",
+      "original_path": "outputs/skill_matching_v1/embedding_worker.py",
+      "original_sha256": "57eb386726bf852f61e78bbde0dfca8e7f1a40e0c8d6aae49143066f3db17c77",
+      "release_sha256": "57eb386726bf852f61e78bbde0dfca8e7f1a40e0c8d6aae49143066f3db17c77",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/match_skills.py",
+      "kind": "adapted",
+      "original_path": "outputs/skill_matching_v1/match_skills.py",
+      "original_sha256": "94331d6d81a08ba3037d0aa3447ce9b022868016e6f63db6e1046ae2aa2d6f74",
+      "release_sha256": "6f3b0e9755367765e06da5fe4d35fb977583bd7b0b97e1ded4dc593cd93a5069",
+      "byte_identical": false,
+      "adapter": true,
+      "description": "Calls release_backend.route before the original request; a refusal becomes PlanError."
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/skill_output_normalization.py",
+      "kind": "copied",
+      "original_path": "outputs/skill_matching_v1/skill_output_normalization.py",
+      "original_sha256": "2ab45466fcfa2993d6926e469c24577e10a8e170e7a9728afc783611f181cd19",
+      "release_sha256": "2ab45466fcfa2993d6926e469c24577e10a8e170e7a9728afc783611f181cd19",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/skill_retrieval.py",
+      "kind": "copied",
+      "original_path": "outputs/skill_matching_v1/skill_retrieval.py",
+      "original_sha256": "e97f8b589c82bc3978256ecc94963d9944bae7f19cc3824827933977a916ae05",
+      "release_sha256": "e97f8b589c82bc3978256ecc94963d9944bae7f19cc3824827933977a916ae05",
+      "byte_identical": true,
+      "adapter": false
+    },
+    {
+      "release_path": "vendor/legacy_engines/skill_matching_v1/skill_semantic_profiles.json",
+      "kind": "copied",
+      "original_path": "outputs/skill_matching_v1/skill_semantic_profiles.json",
+      "original_sha256": "c70c061553e64f328e155c12673e4c3ef4a4191d19e0034991ea17e418a13fa5",
+      "release_sha256": "c70c061553e64f328e155c12673e4c3ef4a4191d19e0034991ea17e418a13fa5",
+      "byte_identical": true,
+      "adapter": false
+    }
+  ],
+  "excluded_from_this_file": [
+    "RELEASE_PROVENANCE.json",
+    "release_source_lock.json"
+  ],
+  "note": "Hashes are SHA-256 of file bytes. Original files are not redistributed beyond the copies listed here.",
+  "publication_metadata": {
+    ".gitattributes": "'* -text' unsets the Git text attribute for every file so line endings are never converted on checkout or commit (Windows or Linux, any core.autocrlf). Release files are pinned by byte-level SHA-256 here and in release_source_lock.json, and the catalogue loader checks a hardcoded hash, so end-of-line conversion would break a normal clone. Files are not marked binary; textual diffs still work.",
+    ".gitignore": "Keeps /runs/ (README quickstart outputs and raw backend logs), __pycache__/, *.py[cod], .venv/, venv/ and .env/.env.* (except .env.example) out of 'git add --all'."
+  },
+  "post_validation_documentation": {
+    "date": "2026-11-17",
+    "files": [
+      "README.md",
+      "docs/upload.md",
+      "docs/validation.md"
+    ],
+    "scope": "Added verified offline outcomes and pinned-file upload guidance. No Python, algorithm, prompt template or skill contract changes after the 44-test run."
+  },
+  "publication_target": {
+    "repository": "https://github.com/StarCo-Lewis/scene-graph-task-planner",
+    "mode": "first_publication_to_owner_created_repository",
+    "remote_accessed": false,
+    "original_go2_repository_modified": false,
+    "documentation_only_update": true
+  }
+}

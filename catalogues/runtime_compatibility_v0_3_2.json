@@ -1,0 +1,740 @@
+{
+  "format": "sgtp_runtime_catalogue_compatibility_v1",
+  "catalogue": {
+    "library_id": "quadruped_lift_arm_atomic_skills",
+    "version": "0.3.2",
+    "release_path": "catalogues/skill_catalogue_v0_3_2.release.json",
+    "skill_count": 30
+  },
+  "runtime_profile": "formal_v0_3_2_wire_compatible",
+  "offered_skill_count": 12,
+  "excluded_skill_count": 18,
+  "offered_skill_ids": [
+    "navigate_to_object",
+    "navigate_to_location",
+    "grasp_object",
+    "lift_held_object",
+    "place_object_on_surface",
+    "place_object_in_container",
+    "release_object",
+    "open_articulated_object",
+    "close_articulated_object",
+    "press_control",
+    "handover_object",
+    "bend_and_lift_object"
+  ],
+  "rules": {
+    "matrix_codebook": "vendor/legacy_engines/skill_matching_v1/action_matrix.py make_codebook: at most two parameter slots; every non-object parameter must be an optional number/height_m with a finite numeric default; object types are scene_element, location, surface, container, person, control",
+    "semantic_profile": "vendor/legacy_engines/skill_matching_v1/skill_semantic_profiles.json (version 1.1, generated from catalogue 0.2.0) must contain the skill_id, otherwise skill_retrieval.enrich raises KeyError"
+  },
+  "skills": [
+    {
+      "skill_id": "navigate_to_object",
+      "category": "navigation",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "standoff_m",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "navigate_to_location",
+      "category": "navigation",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "destination",
+          "type": "location",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "adjust_arm_height",
+      "category": "arm_positioning",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "height",
+          "type": "height_m",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "nonobject_parameter_without_optional_finite_numeric_default:height(height_m)",
+        "missing_semantic_retrieval_profile"
+      ]
+    },
+    {
+      "skill_id": "grasp_object",
+      "category": "manipulation",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "lift_held_object",
+      "category": "manipulation",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "place_object_on_surface",
+      "category": "manipulation",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "surface",
+          "type": "surface",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "place_object_in_container",
+      "category": "manipulation",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "container",
+          "type": "container",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "release_object",
+      "category": "manipulation",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "open_articulated_object",
+      "category": "articulated_manipulation",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "close_articulated_object",
+      "category": "articulated_manipulation",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "push_object",
+      "category": "contact_manipulation",
+      "parameter_slots": 3,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "direction",
+          "type": "vector_or_symbolic_direction",
+          "required": true
+        },
+        {
+          "name": "distance_m",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:direction(vector_or_symbolic_direction)",
+        "nonobject_parameter_without_optional_finite_numeric_default:distance_m(number)"
+      ]
+    },
+    {
+      "skill_id": "pull_object",
+      "category": "contact_manipulation",
+      "parameter_slots": 3,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "direction",
+          "type": "vector_or_symbolic_direction",
+          "required": true
+        },
+        {
+          "name": "distance_m",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:direction(vector_or_symbolic_direction)",
+        "nonobject_parameter_without_optional_finite_numeric_default:distance_m(number)"
+      ]
+    },
+    {
+      "skill_id": "press_control",
+      "category": "device_interaction",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "control",
+          "type": "control",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "pour_into_container",
+      "category": "manipulation",
+      "parameter_slots": 3,
+      "parameters": [
+        {
+          "name": "source",
+          "type": "container",
+          "required": true
+        },
+        {
+          "name": "target_container",
+          "type": "container",
+          "required": true
+        },
+        {
+          "name": "content",
+          "type": "semantic_content",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:content(semantic_content)"
+      ]
+    },
+    {
+      "skill_id": "handover_object",
+      "category": "human_interaction",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "recipient",
+          "type": "person",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "walk_omnidirectional_velocity",
+      "category": "locomotion_control",
+      "parameter_slots": 5,
+      "parameters": [
+        {
+          "name": "vx_m_s",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "vy_m_s",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "yaw_rate_rad_s",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "duration_s",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "reference_frame",
+          "type": "reference_frame",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:vx_m_s(number)",
+        "nonobject_parameter_without_optional_finite_numeric_default:vy_m_s(number)",
+        "nonobject_parameter_without_optional_finite_numeric_default:yaw_rate_rad_s(number)",
+        "nonobject_parameter_without_optional_finite_numeric_default:duration_s(number)",
+        "nonobject_parameter_without_optional_finite_numeric_default:reference_frame(reference_frame)"
+      ]
+    },
+    {
+      "skill_id": "turn_by_stepping",
+      "category": "locomotion_control",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "yaw_delta_rad",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "reference_frame",
+          "type": "reference_frame",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "nonobject_parameter_without_optional_finite_numeric_default:yaw_delta_rad(number)",
+        "nonobject_parameter_without_optional_finite_numeric_default:reference_frame(reference_frame)"
+      ]
+    },
+    {
+      "skill_id": "turn_in_place",
+      "category": "locomotion_control",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "yaw_delta_rad",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "reference_frame",
+          "type": "reference_frame",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "nonobject_parameter_without_optional_finite_numeric_default:yaw_delta_rad(number)",
+        "nonobject_parameter_without_optional_finite_numeric_default:reference_frame(reference_frame)"
+      ]
+    },
+    {
+      "skill_id": "bend_and_lift_object",
+      "category": "whole_body_manipulation",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": true,
+      "exclusion_reasons": []
+    },
+    {
+      "skill_id": "reach_and_grasp_object",
+      "category": "whole_body_manipulation",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "hand",
+          "type": "hand_selector",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "nonobject_parameter_without_optional_finite_numeric_default:hand(hand_selector)"
+      ]
+    },
+    {
+      "skill_id": "reach_and_place_object",
+      "category": "whole_body_manipulation",
+      "parameter_slots": 3,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "target_pose",
+          "type": "pose_reference",
+          "required": true
+        },
+        {
+          "name": "hand",
+          "type": "hand_selector",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:target_pose(pose_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:hand(hand_selector)"
+      ]
+    },
+    {
+      "skill_id": "reset_lower_body",
+      "category": "configuration_reset",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "reference_state",
+          "type": "state_reference",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "nonobject_parameter_without_optional_finite_numeric_default:reference_state(state_reference)"
+      ]
+    },
+    {
+      "skill_id": "reset_upper_body",
+      "category": "configuration_reset",
+      "parameter_slots": 1,
+      "parameters": [
+        {
+          "name": "reference_state",
+          "type": "state_reference",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "nonobject_parameter_without_optional_finite_numeric_default:reference_state(state_reference)"
+      ]
+    },
+    {
+      "skill_id": "reset_manipulation_state",
+      "category": "configuration_reset",
+      "parameter_slots": 2,
+      "parameters": [
+        {
+          "name": "component",
+          "type": "component_selector",
+          "required": true
+        },
+        {
+          "name": "reference_state",
+          "type": "state_reference",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "nonobject_parameter_without_optional_finite_numeric_default:component(component_selector)",
+        "nonobject_parameter_without_optional_finite_numeric_default:reference_state(state_reference)"
+      ]
+    },
+    {
+      "skill_id": "place_object_at_pose",
+      "category": "manipulation",
+      "parameter_slots": 3,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "target_pose",
+          "type": "pose_reference",
+          "required": true
+        },
+        {
+          "name": "support",
+          "type": "surface",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:target_pose(pose_reference)"
+      ]
+    },
+    {
+      "skill_id": "hold_and_stabilize_object",
+      "category": "manipulation",
+      "parameter_slots": 4,
+      "parameters": [
+        {
+          "name": "object",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "hand",
+          "type": "hand_selector",
+          "required": true
+        },
+        {
+          "name": "constraint_reference",
+          "type": "contact_constraint_reference",
+          "required": true
+        },
+        {
+          "name": "duration_s",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:hand(hand_selector)",
+        "nonobject_parameter_without_optional_finite_numeric_default:constraint_reference(contact_constraint_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:duration_s(number)"
+      ]
+    },
+    {
+      "skill_id": "translate_with_contact_constraint",
+      "category": "contact_manipulation",
+      "parameter_slots": 4,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "trajectory",
+          "type": "trajectory_reference",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "type": "contact_constraint_reference",
+          "required": true
+        },
+        {
+          "name": "hand",
+          "type": "hand_selector",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:trajectory(trajectory_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:constraints(contact_constraint_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:hand(hand_selector)"
+      ]
+    },
+    {
+      "skill_id": "rotate_with_contact_constraint",
+      "category": "contact_manipulation",
+      "parameter_slots": 4,
+      "parameters": [
+        {
+          "name": "target",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "trajectory",
+          "type": "trajectory_reference",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "type": "contact_constraint_reference",
+          "required": true
+        },
+        {
+          "name": "hand",
+          "type": "hand_selector",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:trajectory(trajectory_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:constraints(contact_constraint_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:hand(hand_selector)"
+      ]
+    },
+    {
+      "skill_id": "follow_surface_contact",
+      "category": "contact_manipulation",
+      "parameter_slots": 4,
+      "parameters": [
+        {
+          "name": "surface",
+          "type": "surface",
+          "required": true
+        },
+        {
+          "name": "trajectory",
+          "type": "trajectory_reference",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "type": "contact_constraint_reference",
+          "required": true
+        },
+        {
+          "name": "hand",
+          "type": "hand_selector",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:trajectory(trajectory_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:constraints(contact_constraint_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:hand(hand_selector)"
+      ]
+    },
+    {
+      "skill_id": "wipe_surface",
+      "category": "contact_manipulation",
+      "parameter_slots": 4,
+      "parameters": [
+        {
+          "name": "cloth",
+          "type": "scene_element",
+          "required": true
+        },
+        {
+          "name": "surface",
+          "type": "surface",
+          "required": true
+        },
+        {
+          "name": "region",
+          "type": "trajectory_reference",
+          "required": false
+        },
+        {
+          "name": "constraints",
+          "type": "contact_constraint_reference",
+          "required": true
+        }
+      ],
+      "offered_at_runtime": false,
+      "exclusion_reasons": [
+        "more_than_two_parameter_slots",
+        "nonobject_parameter_without_optional_finite_numeric_default:region(trajectory_reference)",
+        "nonobject_parameter_without_optional_finite_numeric_default:constraints(contact_constraint_reference)",
+        "missing_semantic_retrieval_profile"
+      ]
+    }
+  ],
+  "offered_skill_precondition_gaps": {
+    "note": "Preconditions of offered skills that no offered skill produces in catalogue 0.3.2 (v0.3.0 removed position_arm_for_object, the former producer of reachable). The legacy reducer (match_skills.check_preconditions) does not enforce these; it marks every non-grounded precondition as unknown and feasibility as unknown. Plans containing these skills are symbolic proposals only.",
+    "unproduced_preconditions": {
+      "grasp_object": [
+        "$target.reachable"
+      ],
+      "place_object_on_surface": [
+        "$surface.reachable"
+      ],
+      "place_object_in_container": [
+        "$container.reachable"
+      ],
+      "open_articulated_object": [
+        "$target.reachable"
+      ],
+      "close_articulated_object": [
+        "$target.reachable"
+      ],
+      "press_control": [
+        "$control.reachable"
+      ],
+      "handover_object": [
+        "$recipient.reachable"
+      ],
+      "bend_and_lift_object": [
+        "robot.motion_limits_verified"
+      ]
+    }
+  },
+  "independent_cross_check": {
+    "source": "primary agent audit (catalogue_compatibility_independent.json, not published)",
+    "agreement": "12 offered / 18 excluded, identical skill sets",
+    "mismatching_skill_ids": []
+  },
+  "claim_boundary": "Wire compatibility means the copied matrix ABI and retrieval metadata accept the definition. It is not evidence that a controller implements the skill or that any plan is executable."
+}
